@@ -3,6 +3,8 @@ import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { ConfigModule } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
+import { HairstyleModule } from "./hairstyle/hairstyle.module";
+import { MakeupModule } from "./makeup/makeup.module";
 
 @Module({
     imports: [
@@ -16,7 +18,9 @@ import { TypeOrmModule } from "@nestjs/typeorm";
             database: process.env.DB_DATABASE,
             entities: [__dirname + "/**/*.entity{.ts,.js}"],
             synchronize: process.env.DB_SYNCHRONIZE === "true"
-        })
+        }),
+        HairstyleModule,
+        MakeupModule
     ],
     controllers: [AppController],
     providers: [AppService]
