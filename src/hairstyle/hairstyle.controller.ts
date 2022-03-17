@@ -1,7 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, HttpStatus } from "@nestjs/common";
+import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, HttpStatus, Query } from "@nestjs/common";
 import { HairstyleService } from "./hairstyle.service";
 import { CreateHairstyleDto } from "./dto/create-hairstyle.dto";
 import { UpdateHairstyleDto } from "./dto/update-hairstyle.dto";
+import { QueryParamDto } from "./dto/query-param.dto";
 
 @Controller("api/hairstyles")
 export class HairstyleController {
@@ -35,5 +36,11 @@ export class HairstyleController {
     @Delete(":id")
     remove(@Param("id") id: number) {
         return this.hairstyleService.removeHairstyle(id);
+    }
+
+    @HttpCode(HttpStatus.OK)
+    @Get("filter/data")
+    retrieveTags(@Query() reqParam: QueryParamDto) {
+        return this.hairstyleService.filterHairstyle(reqParam);
     }
 }
