@@ -29,11 +29,11 @@ $ npm install
 
 - [Dockerize PostgreSQL](https://docs.docker.com/samples/postgresql_service/)
 
-### Create and configure your database.
+### Create and configure your database connection.
 
 ```bash
 # Create database
-$ CREATE DATABASE db_name;
+$ CREATE DATABASE <db_name>;
 
 # Create a file .env in the application root directory and paste the following variables
 SERVER_PORT=<server_port>
@@ -46,7 +46,7 @@ DB_DATABASE=<db_name>
 DB_SYNCHRONIZE=true
 ```
 
-## Running the app
+## Running the application
 
 ```bash
 # development
@@ -57,7 +57,9 @@ $ npm run start:dev
 ```
 
 ## API Testing
-- Using Swagger API Documentation (Make sure the cloned app is running)
+
+- Using [Swagger API Documentation](https://swagger.io/docs/) (Make sure the cloned app is running)
+
 ```bash
 # Copy this link below in your browser and run your tests. 
 $ http://localhost:5000/api/
