@@ -23,11 +23,11 @@ $ npm install
 
 ### Install PostgreSQL locally.
 
-- [https://www.postgresql.org/](PostgreSQL).
+- [PostgreSQL](https://www.postgresql.org/). 
 
 ### Install PostgreSQL on Docker.
 
-- [https://docs.docker.com/samples/postgresql_service/](Dockerize PostgreSQL)
+- [Dockerize PostgreSQL](https://docs.docker.com/samples/postgresql_service/)
 
 ### Create and configure your database.
 
@@ -56,13 +56,14 @@ $ npm run start
 $ npm run start:dev
 ```
 
-## Testing
-- Using Swagger API Documentation (Make sure the app is running)
+## API Testing
+- Using Swagger API Documentation (Make sure the cloned app is running)
 ```bash
-Copy http://localhost:5000/api/ in your favorite browser and run your tests.
+# Copy this link below in your browser and run your tests. 
+$ http://localhost:5000/api/
 
 ```
-- Using Postman which is an API testing tool (This should be installed locally on your computer)
+- Using [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/download) API testing tools (These should be installed locally on your computer)
 
 ## License
 
