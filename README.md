@@ -19,11 +19,19 @@ $ git clone https://github.com/arnoldkunihira/beauty_tags.git
 $ npm install
 ```
 
-## Set up your database connection, for this application postgreSQL is configured using docker or locally by creating a file in the root directory called .env.
+## Database Configuration
 
 ```bash
-Add this to .env file for your own configurations.
+# Install PostgreSQL locally.
+$ [https://www.postgresql.org/](PostgreSQL).
 
+# Install PostgreSQL on Docker
+$ [https://docs.docker.com/samples/postgresql_service/] (Dockerize PostgreSQL)
+
+# Create database
+$ CREATE DATABASE db_name;
+
+# Create a file .env in the application root directory and paste the following variables
 SERVER_PORT=<server_port>
 MODE=DEV
 DB_HOST=<db_host>
@@ -51,7 +59,6 @@ Copy http://localhost:5000/api/ in your favorite browser and run your tests.
 
 ```
 - Using Postman which is an API testing tool (This should be installed locally on your computer)
-
 
 ## License
 
