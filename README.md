@@ -21,13 +21,17 @@ $ npm install
 
 ## Database Configuration
 
+### Install PostgreSQL locally.
+
+- [https://www.postgresql.org/](PostgreSQL).
+
+### Install PostgreSQL on Docker.
+
+- [https://docs.docker.com/samples/postgresql_service/](Dockerize PostgreSQL)
+
+### Create and configure your database.
+
 ```bash
-# Install PostgreSQL locally.
-$ [https://www.postgresql.org/](PostgreSQL).
-
-# Install PostgreSQL on Docker
-$ [https://docs.docker.com/samples/postgresql_service/] (Dockerize PostgreSQL)
-
 # Create database
 $ CREATE DATABASE db_name;
 
