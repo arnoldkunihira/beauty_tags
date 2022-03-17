@@ -29,7 +29,7 @@ export class HairstyleController {
     @HttpCode(HttpStatus.OK)
     @Patch(":id")
     update(@Param("id") id: number, @Body() updateHairstyleDto: UpdateHairstyleDto) {
-        return this.hairstyleService.updateHairstyle(+id, updateHairstyleDto);
+        return this.hairstyleService.updateHairstyle(id, updateHairstyleDto);
     }
 
     @HttpCode(HttpStatus.OK)

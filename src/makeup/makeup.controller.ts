@@ -34,6 +34,6 @@ export class MakeupController {
     @HttpCode(HttpStatus.OK)
     @Delete(":id")
     remove(@Param("id") id: number) {
-        return this.makeupService.removeMakeup(+id);
+        return this.makeupService.removeMakeup(id);
     }
 }
