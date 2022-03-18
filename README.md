@@ -1,13 +1,6 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Beauty Tags API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript API that returns beauty tags to a user.
+A TypeScript API that returns beauty tags to a user and was bootstrapped with [Nest Framework](https://nestjs.com/)
 
 ## Installation
 
