@@ -4,10 +4,12 @@ import { UpdateHairstyleDto } from "./dto/update-hairstyle.dto";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Hairstyle } from "./entities/hairstyle.entity";
 import { Repository } from "typeorm";
+import { HairstyleType } from "./types";
 
 @Injectable()
 export class HairstyleService {
     private static BEAUTY_TAG_TYPE = "hairstyle";
+    private static BEAUTY_TAG = "braids";
 
     constructor(@InjectRepository(Hairstyle) private readonly repository: Repository<Hairstyle>) {}
 
@@ -46,20 +48,24 @@ export class HairstyleService {
         return this.repository.remove(hairstyle);
     }
 
-    async filterHairstyle(params): Promise<Hairstyle | string> {
+    async filterHairstyle(params): Promise<Hairstyle | HairstyleType> {
         const query = await this.repository.query("SELECT * FROM hairstyle WHERE hairstyle.name LIKE $1", ["%braids"]);
+
+        if (query && params.type === HairstyleService.BEAUTY_TAG_TYPE && params.tag === HairstyleService.BEAUTY_TAG) {
+            return query;
+        }
 
         if (params.type === "" || params.tag === "" || params.type !== HairstyleService.BEAUTY_TAG_TYPE) {
             throw new BadRequestException(`Query parameters need to be checked.`);
         }
 
-        if (params.tag !== "") {
+        if (params.tag !== "" && params.type === HairstyleService.BEAUTY_TAG_TYPE) {
             const insertQuery = await this.repository.query("INSERT INTO hairstyle (name) VALUES ($1)", [params.tag]);
             if (insertQuery) {
-                return `${params.tag} tag is added to database whose type is ${params.type}`;
+                return {
+                    message: `${params.tag} tag is added to database whose type is ${params.type}`
+                };
             }
         }
-
-        return query;
     }
 }
