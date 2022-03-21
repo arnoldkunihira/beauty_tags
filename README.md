@@ -28,7 +28,7 @@ $ npm install
 # Create database
 $ CREATE DATABASE <db_name>;
 
-# Create a file .env in the application root directory and paste the following variables
+# Create a file .env in the application root directory and paste the following with appropriate values
 SERVER_PORT=<server_port>
 MODE=DEV
 DB_HOST=<db_host>
@@ -58,7 +58,9 @@ $ npm run start:dev
 $ http://localhost:5000/api/
 
 ```
-- Using [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/download) API testing tools (These should be installed locally on your computer)
+- Using [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/download) API testing tools (These should be installed locally on your computer)\
+ and one must have experience using these tools mentioned above.
+
 
 ## License
 
