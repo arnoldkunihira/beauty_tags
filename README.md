@@ -58,7 +58,7 @@ $ npm run start:dev
 $ http://localhost:5000/api/
 
 ```
-- Using [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/download) API testing tools (It is recommended to install them locally on your computer)\
+- Using [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/download) API testing tools (It is recommended to install either locally on your computer)\
  and one must have experience using the mentioned tools above.
 
 
